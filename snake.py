@@ -63,7 +63,7 @@ def move() -> None:
     for body in snake:
         square(body.x, body.y, 9, "black")
 
-    square(food.x, food.y, 9, "green")
+    square(food.x, food.y, 9, "blue")
     update()
     ontimer(move, 100)
 
@@ -76,5 +76,13 @@ onkey(lambda: change(10, 0), "Right")
 onkey(lambda: change(-10, 0), "Left")
 onkey(lambda: change(0, 10), "Up")
 onkey(lambda: change(0, -10), "Down")
+
+
+onkey(lambda: change(10, 0), "d")
+onkey(lambda: change(-10, 0), "a")
+onkey(lambda: change(0, 10), "w")
+onkey(lambda: change(0, -10), "s")
+move()
+
 move()
 done()
